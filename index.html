@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>João Pedro Lauriano | Portfólio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <nav>
+            <a href="#inicio">Início</a>
+            <a href="#sobre">Sobre mim</a>
+            <a href="#projetos">Projetos</a>
+            <a href="#contato">Contato</a>
+        </nav>
+    </header>
+
+    <main>
+        <section id="inicio" class="card">
+            <h1>Olá, eu sou o João Pedro!</h1>
+            <p>Estudante de Análise e Desenvolvimento de Sistemas (ADS) e desenvolvedor web em formação.</p>
+            <button onclick="mensagem()">Conheça meu site</button>
+        </section>
+
+        <section id="sobre" class="card">
+            <h2>Sobre mim</h2>
+            <p>Olá! Estou cursando Análise e Desenvolvimento de Sistemas e desenvolvendo projetos práticos com HTML, CSS, JavaScript e lógica de programação.</p>
+        </section>
+
+        <section id="projetos" class="card">
+            <h2>Meus Projetos</h2>
+            <p>Alguns dos trabalhos e estudos que venho construindo:</p>
+
+            <div class="grid-projetos">
+                <div class="projeto-item">
+                    <h3>Portfólio Pessoal</h3>
+                    <p>Meu primeiro site completo criado do zero com HTML5, CSS3 moderno e JavaScript.</p>
+                    <span class="tag">HTML • CSS • JS</span>
+                </div>
+
+                <div class="projeto-item">
+                    <h3>Lógica & Algoritmos</h3>
+                    <p>Resolução de problemas matemáticos, estruturas de decisão e fluxogramas.</p>
+                    <span class="tag">Lógica • Algoritmos</span>
+                </div>
+
+                <div class="projeto-item">
+                    <h3>Próximo Projeto</h3>
+                    <p>Em breve um novo sistema web interativo será adicionado aqui.</p>
+                    <span class="tag">Em desenvolvimento</span>
+                </div>
+            </div>
+        </section>
+
+        <section id="contato" class="card">
+            <h2>Contato</h2>
+            <p>Entre em contato comigo pelos canais abaixo ou envie uma mensagem:</p>
+
+            <div class="info-contato">
+                <p>📧 E-mail: <a href="mailto:joaopedrolauriano15@gmail.com">joaopedrolauriano15@gmail.com</a></p>
+                <p>📱 WhatsApp: <a href="https://wa.me/5521973245723" target="_blank">(21) 97324-5723</a></p>
+            </div>
+
+            <form onsubmit="enviarFormulario(event)">
+                <input type="text" id="nome" placeholder="Seu nome" required>
+                <input type="email" id="email" placeholder="Seu e-mail" required>
+                <textarea id="texto" rows="4" placeholder="Sua mensagem..." required></textarea>
+                <button type="submit">Enviar Mensagem</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>Desenvolvido por João Pedro Lauriano • 2026</p>
+    </footer>
+
+    <script>
+        function mensagem() {
+            alert("Bem-vindo ao meu portfólio!");
+        }
+
+        function enviarFormulario(event) {
+            event.preventDefault();
+            const nome = document.getElementById("nome").value;
+            alert("Obrigado pelo contato, " + nome + "! Sua mensagem foi enviada.");
+            event.target.reset();
+        }
+    </script>
+
+</body>
+</html>

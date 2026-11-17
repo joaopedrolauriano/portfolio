@@ -1,0 +1,217 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #111827;
+    color: white;
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+/* Menu fixo no topo */
+header {
+    background-color: #1f2937;
+    padding: 20px;
+    position: sticky;
+    top: 0;
+    border-bottom: 1px solid #374151;
+    z-index: 10;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #38bdf8;
+}
+
+/* Container principal */
+main {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+/* Estilo dos Cards (Seções) */
+.card {
+    background-color: #1f2937;
+    padding: 60px 30px;
+    margin-bottom: 40px;
+    border-radius: 12px;
+    scroll-margin-top: 90px;
+    min-height: 85vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    color: #38bdf8;
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+
+h2 {
+    color: #38bdf8;
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    color: #d1d5db;
+    max-width: 650px;
+}
+
+button {
+    background-color: #38bdf8;
+    color: #111827;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #0ea5e9;
+}
+
+/* Grid de Projetos */
+.grid-projetos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.projeto-item {
+    background-color: #111827;
+    border: 1px solid #374151;
+    border-radius: 10px;
+    padding: 25px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.2s, border-color 0.2s;
+}
+
+.projeto-item:hover {
+    transform: translateY(-5px);
+    border-color: #38bdf8;
+}
+
+.projeto-item h3 {
+    color: #38bdf8;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.projeto-item p {
+    font-size: 15px;
+    margin-bottom: 15px;
+}
+
+.tag {
+    display: inline-block;
+    background-color: #1f2937;
+    color: #38bdf8;
+    font-size: 13px;
+    font-weight: bold;
+    padding: 6px 12px;
+    border-radius: 20px;
+    border: 1px solid #374151;
+}
+
+/* Links de Contato direto */
+.info-contato {
+    margin-bottom: 20px;
+}
+
+.info-contato p {
+    margin-bottom: 8px;
+}
+
+.info-contato a {
+    color: #38bdf8;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.info-contato a:hover {
+    text-decoration: underline;
+}
+
+/* Estilo do Formulário */
+form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 450px;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border-radius: 8px;
+    border: 1px solid #374151;
+    background-color: #111827;
+    color: white;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    outline: none;
+}
+
+input:focus, textarea:focus {
+    border-color: #38bdf8;
+}
+
+/* Rodapé */
+footer {
+    background-color: #1f2937;
+    padding: 20px;
+    border-top: 1px solid #374151;
+    margin-top: 40px;
+}
+
+footer p {
+    font-size: 14px;
+    margin: 0 auto;
+    color: #9ca3af;
+}
+
+/* Responsividade para Celular */
+@media (max-width: 768px) {
+    nav a {
+        margin: 0 8px;
+        font-size: 15px;
+    }
+
+    h1 {
+        font-size: 30px;
+    }
+
+    .grid-projetos {
+        grid-template-columns: 1fr;
+    }
+}
